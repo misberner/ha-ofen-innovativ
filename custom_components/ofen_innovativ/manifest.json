@@ -1,0 +1,11 @@
+{
+  "codeowners": ["@misberner"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/misberner/ha-ofen-innovativ/",
+  "domain": "ofen_innovativ",
+  "iot_class": "local_polling",
+  "name": "Ofen Innovativ",
+  "requirements": [],
+  "version": "0.0.1"
+}
