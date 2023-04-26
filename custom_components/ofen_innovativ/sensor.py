@@ -27,7 +27,7 @@ from .entity import OfenInnovativEntity
 class OfenInnovativSensorRequiredKeysMixin:
     """Mixin for required keys."""
 
-    value_fn: Callable[[OfenInnovativPollData], int | str | datetime | None]
+    value_fn: Optional[Callable[[OfenInnovativPollData], int | str | datetime | None]] = None
     icon_fn: Optional[Callable[[OfenInnovativPollData], str]] = None
 
     def dynamic_icon(self, data: OfenInnovativPollData):
@@ -38,8 +38,8 @@ class OfenInnovativSensorRequiredKeysMixin:
 
 @dataclass
 class OfenInnovativSensorEntityDescription(
-    SensorEntityDescription,
     OfenInnovativSensorRequiredKeysMixin,
+    SensorEntityDescription,
 ):
     """Describes a sensor entity."""
 
